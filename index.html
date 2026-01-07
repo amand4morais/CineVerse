@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Séries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <div class="logo-header">
+                <img src="icons/television.png" alt="tv">
+                <h1 class="logo">CineVerse</h1>
+            </div>
+
+            <nav>
+                <ul class="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#series">Séries</a></li>
+                    <li><a href="#favoritos">Favoritos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção destaque -->
+    <section id="inicio" class="secao destaque">
+        <div class="container destaque-conteudo">
+            
+            <div class="destaque-texto">
+                <h2>Descubra novas séries para maratonar</h2>
+                <p>
+                    Explore um catálogo completo com recomendações de séries para todos os gostos. <br>
+                    Aqui você encontra histórias envolventes, personagens marcantes e produções imperdíveis.
+                </p>
+                
+                <!-- Filtros visuais de gêneros -->
+                <div class="filtros">
+                    <button class="filtro" data-filtro="Todos">Todos</button>
+                    <button class="filtro" data-filtro="Romance">Romance</button>
+                    <button class="filtro" data-filtro="Ação">Ação</button>
+                    <button class="filtro" data-filtro="Comédia">Comédia</button>
+                    <button class="filtro" data-filtro="Drama">Drama</button>
+                    <button class="filtro" data-filtro="Terror">Terror</button>
+                    <button class="filtro" data-filtro="Suspense">Suspense</button>
+                    <button class="filtro" data-filtro="Ficção Científica">Ficção Científica</button>
+                </div>                
+                <div class="barra-pesquisa">
+                    <input type="text" id="pesquisa" placeholder="Procurar séries ou gêneros">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção catálogo de séries -->
+    <section id="series" class="secao secao-cinza">
+        <div class="container">
+            <h2>Séries em destaque</h2>
+
+            <div class="carrossel-container">
+                <button class="seta seta-esquerda">
+                    <img src="icons/angle-left.png" alt="Voltar">
+                </button>
+
+                <div class="grid-series carrossel">
+                    <!-- Card 1 -->
+                    <div class="card-serie" data-id="Stranger Things" data-genero="Ficção Científica,Suspense" data-link="https://www.youtube.com/watch?si=m6jp_9oSE1Pup6mF&v=RMmGQNNl164&feature=youtu.be">
+                        <img src="https://uauposters.com.br/media/catalog/product/8/9/899720220526-uau-posters-stranger-things-series.jpg" alt="Stranger Things">
+                        <h3>Stranger Things</h3>
+                        <p class="genero">Gênero: Ficção científica / Suspense</p>
+                        <p class="descricao">
+                            Um grupo de amigos se envolve em mistérios sobrenaturais após o desaparecimento
+                            de um garoto em uma pequena cidade.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?si=m6jp_9oSE1Pup6mF&v=RMmGQNNl164&feature=youtu.be" target="_blank">Assistir</a>
+                            </button>
+                        
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png" alt="Favoritar">
+                            </button>
+                        </div>
+                        
+                    </div>
+
+                    <div class="card-serie" data-id="Anne with an E" data-genero="Drama,Romance" data-link="https://www.youtube.com/watch?v=S5qJXYNNINo">
+                        <img src="https://uauposters.com.br/media/catalog/product/2/0/201906131058-uau-posters-series-seriado-anne-with-an-e.jpg" alt="Anne with an E">
+                        <h3>Anne with an E</h3>
+                        <p class="genero">Gênero: Drama / Romance</p>
+                        <p class="descricao">
+                            Uma jovem órfã imaginativa transforma a vida de todos
+                            ao seu redor ao chegar à pequena cidade de Avonlea.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=S5qJXYNNINo" target="_blank">Assistir</a>
+                            </button>
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-serie" data-id="The Witcher" data-genero="Fantasia,Ação,Drama" data-link="https://www.youtube.com/watch?v=ndl1W4ltcmg">
+                        <img src="https://uauposters.com.br/media/catalog/product/4/0/409920210407-uau-posters-the-witcher-series-3.jpg" alt="The Witcher">
+                        <h3>The Witcher</h3>
+                        <p class="genero">Gênero: Fantasia / Ação / Drama</p>
+                        <p class="descricao">
+                            Um caçador de monstros solitário luta para encontrar seu lugar
+                            em um mundo onde humanos podem ser mais cruéis que feras.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=ndl1W4ltcmg" target="_blank">Assistir</a>
+                            </button>
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card-serie" data-id="The Last of Us" data-genero="Drama,Ação,Pós-apocalíptico" data-link="https://www.youtube.com/watch?v=uLtkt8BonwM">
+                        <img src="https://m.media-amazon.com/images/I/61QAP9s0d5L._AC_UF1000,1000_QL80_.jpg" alt="The Last of Us">
+                        <h3>The Last of Us</h3>
+                        <p class="genero">Gênero: Drama / Ação</p>
+                        <p class="descricao">
+                            Em um mundo devastado por uma infecção, um homem deve escoltar
+                            uma jovem que pode ser a chave para a sobrevivência da humanidade.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=uLtkt8BonwM" target="_blank">Assistir</a>
+                            </button>
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <!-- Card 2 -->
+                    <div class="card-serie" data-id="Brooklyn Nine-Nine" data-genero="Comédia" data-link="https://www.youtube.com/watch?v=sEOuJ4z5aTc">
+                        <img src="https://i.pinimg.com/736x/52/1d/27/521d271fb4b41a5e19a30de376361a30.jpg" alt="Brooklyn Nine-Nine">
+                        <h3>Brooklyn Nine-Nine</h3>
+                        <p class="genero">Gênero: Comédia</p>
+                        <p class="descricao">
+                            Uma divertida série policial que acompanha o dia a dia de detetives
+                            em uma delegacia de Nova York.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=sEOuJ4z5aTc" target="_blank">Assistir</a>
+                            </button>
+                        
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png" alt="Favoritar">
+                            </button>
+                        </div>                    
+                    </div>
+    
+                    <!-- Card 3 -->
+                    <div class="card-serie" data-id="Breaking Bad" data-genero="Drama" data-link="https://www.youtube.com/watch?v=HhesaQXLuRY">
+                        <img src="https://i.pinimg.com/736x/52/2e/f7/522ef7522eb25fccd9e8330ca97d10ac.jpg" alt="Breaking Bad">
+                        <h3>Breaking Bad</h3>
+                        <p class="genero">Gênero: Drama</p>
+                        <p class="descricao">
+                            Um professor de química vê sua vida mudar completamente ao entrar
+                            no mundo do crime para sustentar sua família.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=HhesaQXLuRY" target="_blank">Assistir</a>
+                            </button>
+                        
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png" alt="Favoritar">
+                            </button>
+                        </div>                    
+                    </div>
+    
+                    <!-- Card 4 -->
+                    <div class="card-serie" data-id="The Walking Dead" data-genero="Terror,Drama" data-link="https://www.youtube.com/watch?v=m1lZWAwC5Bw">
+                        <img src="https://m.media-amazon.com/images/I/51zqb41a68L._AC_UF894,1000_QL80_.jpg" alt="The Walking Dead">
+                        <h3>The Walking Dead</h3>
+                        <p class="genero">Gênero: Terror / Drama</p>
+                        <p class="descricao">
+                            Sobreviventes lutam para continuar vivos em um mundo dominado por zumbis
+                            e ameaças humanas.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=m1lZWAwC5Bw" target="_blank">Assistir</a>
+                            </button>
+                        
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png" alt="Favoritar">
+                            </button>
+                        </div>                    
+                    </div>
+    
+                    <!-- Card 5 -->
+                    <div class="card-serie" data-id="Dark" data-genero="Suspense,Ficção Científica" data-link="https://www.youtube.com/watch?v=rrwycJ08PSA">
+                        <img src="https://uauposters.com.br/media/catalog/product/5/0/507720201013-uau-posters-series-seriado-dark-1.jpg" alt="Dark">
+                        <h3>Dark</h3>
+                        <p class="genero">Gênero: Suspense / Ficção científica</p>
+                        <p class="descricao">
+                            O desaparecimento de uma criança revela segredos obscuros e viagens no tempo
+                            envolvendo quatro famílias.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=rrwycJ08PSA" target="_blank">Assistir</a>
+                            </button>
+                        
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png" alt="Favoritar">
+                            </button>
+                        </div>                    
+                    </div>
+    
+                    <!-- Card 6 -->
+                    <div class="card-serie" data-id="Outlander" data-genero="Romance,Drama" data-link="https://www.youtube.com/watch?v=PFFKjptRr7Y&utm_source=chatgpt.com">
+                        <img src="https://i.pinimg.com/564x/b6/ec/d0/b6ecd0b2b749949ccdcf4dcc9459ceb7.jpg" alt="Outlander">
+                        <h3>Outlander</h3>
+                        <p class="genero">Gênero: Romance / Drama</p>
+                        <p class="descricao">
+                            Uma enfermeira é transportada no tempo e vive um intenso romance
+                            em meio a conflitos históricos e emocionais.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=PFFKjptRr7Y&utm_source=chatgpt.com" target="_blank">Assistir</a>
+                            </button>
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-serie" data-id="The Originals" data-genero="Drama,Sobrenatural" data-link="https://www.youtube.com/watch?v=GXrDYboUnnw">
+                        <img src="https://uauposters.com.br/media/catalog/product/2/7/277920140617-uau-posters-series-the-originals-the-originals.jpg" alt="The Originals">
+                        <h3>The Originals</h3>
+                        <p class="genero">Gênero: Drama / Sobrenatural</p>
+                        <p class="descricao">
+                            A família original de vampiros retorna a Nova Orleans
+                            para retomar o poder e proteger seu legado.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=GXrDYboUnnw" target="_blank">Assistir</a>
+                            </button>
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card-serie" data-id="The Vampire Diaries" data-genero="Drama,Romance,Sobrenatural" data-link="https://www.youtube.com/watch?v=BmVmhjjkN4E">
+                        <img src="https://ae01.alicdn.com/kf/S9b49893773ad4ca0a0aca9122dfd85ec2.jpg" alt="The Vampire Diaries">
+                        <h3>The Vampire Diaries</h3>
+                        <p class="genero">Gênero: Drama / Romance / Sobrenatural</p>
+                        <p class="descricao">
+                            Após a chegada de dois irmãos vampiros, a vida de uma jovem muda
+                            completamente em uma cidade cheia de mistérios.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=BmVmhjjkN4E" target="_blank">Assistir</a>
+                            </button>
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png">
+                            </button>
+                        </div>
+                    </div>                    
+    
+                    <!-- Card 7 -->
+                    <div class="card-serie" data-id="The Boys" data-genero="Ação,Drama" data-link="https://www.youtube.com/watch?v=Fv0leN8TmR8">
+                        <img src="https://cdn.europosters.eu/image/750/101099.jpg" alt="The Boys">
+                        <h3>The Boys</h3>
+                        <p class="genero">Gênero: Ação / Drama</p>
+                        <p class="descricao">
+                            Um grupo de vigilantes enfrenta super-heróis corruptos
+                            que abusam de seus poderes.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=Fv0leN8TmR8" target="_blank">Assistir</a>
+                            </button>
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 8 -->
+                    <div class="card-serie" data-id="The Haunting of Hill House" data-genero="Terror,Suspense" data-link="https://www.youtube.com/watch?v=3eqxXqJDmcY&utm_source=chatgpt.com">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/c/cd/The_Haunting_of_Hill_House_poster.jpg" alt="Hill House">
+                        <h3>The Haunting of Hill House</h3>
+                        <p class="genero">Gênero: Terror / Suspense</p>
+                        <p class="descricao">
+                            Uma família marcada por eventos sobrenaturais precisa
+                            enfrentar traumas do passado.
+                        </p>
+                        <div class="acoes-card">
+                            <button class="btn-play">
+                                <a href="https://www.youtube.com/watch?v=3eqxXqJDmcY&utm_source=chatgpt.com" target="_blank">Assistir</a>
+                            </button>
+                            <button class="btn-fav">
+                                <img src="icons/heart-white.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <p id="nenhum-resultado" class="nenhum-resultado">Nenhuma série encontrada.</p>
+
+                <button class="seta seta-direita">
+                    <img src="icons/angle-right.png" alt="Avançar">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-serie" class="modal-overlay">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <button id="fechar-modal" class="btn-fechar">&times;</button>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-sinopse"></p>
+
+            <a id="btn-trailer" class="btn-trailer" href="#" target="_blank">
+                ▶ Assistir Trailer
+            </a>
+        </div>
+    </div>
+
+    <section id="favoritos" class="secao secao-cinza">
+        <div class="container">
+            <h2>Favoritos</h2>
+    
+            <div class="carrossel-container">
+                <button class="seta seta-esquerda fav-esquerda">
+                    <img src="icons/angle-left.png">
+                </button>
+    
+                <div class="grid-series carrossel" id="carrossel-favoritos">
+                    <!-- cards favoritos entram aqui -->
+                </div>
+    
+                <button class="seta seta-direita fav-direita">
+                    <img src="icons/angle-right.png">
+                </button>
+            </div>
+            <p id="msg-sem-favoritos" class="nenhum-resultado">
+                Você ainda não favoritou nenhuma série.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="secao">
+        <div class="container sobre-box">
+            <h2>Sobre o CineVerse</h2>
+    
+            <p>
+                O <strong>CineVerse</strong> é um catálogo digital criado para reunir e organizar
+                recomendações de séries dos mais diversos gêneros, oferecendo uma experiência
+                visual moderna, intuitiva e agradável.
+            </p>
+    
+            <p>
+                O site permite explorar séries por categorias, visualizar descrições detalhadas
+                e descobrir novas histórias para maratonar, tudo em um único lugar.
+            </p>
+    
+            <p>
+                Este projeto foi desenvolvido com foco em <strong>HTML e CSS</strong>,
+                aplicando conceitos como responsividade, filtros interativos e organização de layout,
+                servindo tanto como estudo quanto como um portfólio visual.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- Seção Contato -->
+    <section id="contato" class="secao secao-cinza">
+        <div class="container">
+            <h2>Contato</h2>
+            <br>
+            <p>Quer enviar sugestões de séries?</p>
+            <ul class="lista-contato">
+                <li class="item-contato">
+                    <img src="icons/email.png" alt="Email">
+                    <span><strong>Email:</strong> contato@cineverse.com</span>
+                </li>
+            
+                <li class="item-contato">
+                    <img src="icons/instagram.png" alt="Instagram">
+                    <span><strong>Instagram:</strong> @cineverse</span>
+                </li>
+            
+                <li class="item-contato">
+                    <img src="icons/twitter.png" alt="Twitter">
+                    <span><strong>Twitter:</strong> @cine_verse</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="ano-atual"></span> - Amanda Morais Ribeiro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
